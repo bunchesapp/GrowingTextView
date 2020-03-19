@@ -75,7 +75,7 @@ open class GrowingTextView: UITextView {
         for constraint in constraints {
             if (constraint.firstAttribute == .height) {
               if (constraint.relation == .equal) {
-                  heightConstraint = constraint;
+                heightConstraint = constraint;
               }
               if (constraint.relation == .greaterThanOrEqual) {
                 heightConstraint = constraint;
