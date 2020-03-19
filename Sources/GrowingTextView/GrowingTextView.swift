@@ -74,9 +74,12 @@ open class GrowingTextView: UITextView {
         // height,from: https://github.com/legranddamien/MBAutoGrowingTextView
         for constraint in constraints {
             if (constraint.firstAttribute == .height) {
-                if (constraint.relation == .equal) {
-                    heightConstraint = constraint;
-                }
+              if (constraint.relation == .equal) {
+                  heightConstraint = constraint;
+              }
+              if (constraint.relation == .greaterThanOrEqual) {
+                heightConstraint = constraint;
+              }
             }
         }
     }
